@@ -1,0 +1,74 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: mdb
+-- ------------------------------------------------------
+-- Server version	8.0.1-dmr-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `rost_aa_archiv_aud`
+--
+
+DROP TABLE IF EXISTS `rost_aa_archiv_aud`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rost_aa_archiv_aud` (
+  `AA_CLM_OFF` char(3) NOT NULL,
+  `AA_CLM_NO` char(6) NOT NULL,
+  `AA_CLM_SFX` char(3) NOT NULL,
+  `AA_TIMESTAMP` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `AA_REJECT_NO` char(8) NOT NULL,
+  `AA_CARD_NO` char(3) NOT NULL,
+  `AA_WORKED_DT` date DEFAULT NULL,
+  `AA_POL_NO` char(8) NOT NULL,
+  `AA_NOTICE_DT` date DEFAULT NULL,
+  `AA_WORKED_WHO` char(8) NOT NULL,
+  `AA_WORKED_HOW` char(8) NOT NULL,
+  `AA_CATEGORY` char(7) NOT NULL,
+  `AA_AMT_CEDED` decimal(12,2) NOT NULL,
+  `AA_LAYER_CEDED` char(2) NOT NULL,
+  `AA_TRAN_ACT` char(2) NOT NULL,
+  `AA_TRAN_DET` char(2) NOT NULL,
+  `AA_INS_TYPE` char(1) NOT NULL,
+  `AA_REINS_TYPE` char(1) NOT NULL,
+  `AA_RAID` char(2) NOT NULL,
+  `AA_DOC_TYPE` char(1) NOT NULL,
+  `AA_DOC_NO` char(8) NOT NULL,
+  `AA_RAC` char(8) NOT NULL,
+  `AA_CERTIFICATE` char(10) NOT NULL,
+  `AA_CORR_ID` char(1) NOT NULL,
+  `AA_CEDING_PERCENT` decimal(7,4) NOT NULL,
+  `AA_REJECT_IND` char(1) NOT NULL,
+  `AA_ATLAS_YR` char(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rost_aa_archiv_aud`
+--
+
+LOCK TABLES `rost_aa_archiv_aud` WRITE;
+/*!40000 ALTER TABLE `rost_aa_archiv_aud` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rost_aa_archiv_aud` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-10-29 20:52:33

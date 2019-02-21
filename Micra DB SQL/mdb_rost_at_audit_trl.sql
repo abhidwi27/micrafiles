@@ -1,0 +1,87 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: mdb
+-- ------------------------------------------------------
+-- Server version	8.0.1-dmr-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `rost_at_audit_trl`
+--
+
+DROP TABLE IF EXISTS `rost_at_audit_trl`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rost_at_audit_trl` (
+  `AT_CLM_OFF` char(3) NOT NULL,
+  `AT_CLM_NO` char(6) NOT NULL,
+  `AT_ATLAS_YR` char(2) NOT NULL,
+  `AT_CLM_SFX` char(3) NOT NULL,
+  `AT_TIMESTAMP` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `AT_REJECT_NO` char(8) NOT NULL,
+  `AT_CARD_NO` char(3) NOT NULL,
+  `AT_WORKED_DT` date DEFAULT NULL,
+  `AT_POL_NO` char(8) NOT NULL,
+  `AT_NOTICE_DT` date DEFAULT NULL,
+  `AT_WORKED_WHO` char(8) NOT NULL,
+  `AT_WORKED_HOW` char(8) NOT NULL,
+  `AT_CATEGORY` char(7) NOT NULL,
+  `AT_AMT_CEDED` decimal(15,2) NOT NULL,
+  `AT_LAYER_CEDED` char(2) NOT NULL,
+  `AT_TRAN_ACT` char(2) NOT NULL,
+  `AT_TRAN_DET` char(2) NOT NULL,
+  `AT_INS_TYPE` char(1) NOT NULL,
+  `AT_REINS_TYPE` char(1) NOT NULL,
+  `AT_RAID` char(2) NOT NULL,
+  `AT_DOC_TYPE` char(1) NOT NULL,
+  `AT_DOC_NO` char(8) NOT NULL,
+  `AT_RAC` char(8) NOT NULL,
+  `AT_CERTIFICATE` char(10) NOT NULL,
+  `AT_CEDING_PERCENT` decimal(7,4) NOT NULL,
+  `AT_REJECT_IND` char(1) NOT NULL,
+  `AT_CBR_REC_TYP` char(3) NOT NULL,
+  `AT_CBR_ACT_CD` char(4) NOT NULL,
+  `AT_SEND_DT` date DEFAULT NULL,
+  `AT_REAC_RSV_DT` date DEFAULT NULL,
+  `AT_HOLD_TRANS` char(3) NOT NULL,
+  `AT_HCO` char(3) NOT NULL,
+  `AT_UW_GROUP` char(1) NOT NULL,
+  `AT_MAJ_LN` char(2) NOT NULL,
+  `AT_MIN_LN` char(2) NOT NULL,
+  `AT_POL_PFX` char(3) NOT NULL,
+  `AT_CT_IND` char(1) NOT NULL,
+  `AT_CB90_IND` char(1) NOT NULL,
+  `AT_STATUS` char(1) NOT NULL,
+  `AT_REC_TYPE` char(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rost_at_audit_trl`
+--
+
+LOCK TABLES `rost_at_audit_trl` WRITE;
+/*!40000 ALTER TABLE `rost_at_audit_trl` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rost_at_audit_trl` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-10-29 20:52:35

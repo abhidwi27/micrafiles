@@ -1,0 +1,81 @@
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: mdb
+-- ------------------------------------------------------
+-- Server version	8.0.1-dmr-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `rost_cm_claim`
+--
+
+DROP TABLE IF EXISTS `rost_cm_claim`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rost_cm_claim` (
+  `CM_CLM_OFF` char(3) NOT NULL,
+  `CM_CLM_NO` char(6) NOT NULL,
+  `CM_STATUS` char(1) NOT NULL,
+  `CM_POL_ID` char(12) NOT NULL,
+  `CM_FLAG_1` char(1) NOT NULL,
+  `CM_FLAG_2` char(1) NOT NULL,
+  `CM_LOSS_RSV` decimal(12,2) NOT NULL,
+  `CM_LOSS_PD` decimal(12,2) NOT NULL,
+  `CM_LOSS_EXP` decimal(12,2) NOT NULL,
+  `CM_LOSS_SAL` decimal(12,2) NOT NULL,
+  `CM_LOSS_SUB` decimal(12,2) NOT NULL,
+  `CM_LOSS_INCD` decimal(12,2) NOT NULL,
+  `CM_XS_PR` char(1) NOT NULL,
+  `CM_MOD_ID` char(6) NOT NULL,
+  `CM_MOD_DT` date DEFAULT NULL,
+  `CM_MOD_TM` time DEFAULT NULL,
+  `CM_POL_PFX` char(3) NOT NULL,
+  `CM_POL_NO` char(8) NOT NULL,
+  `CM_INIT_CEDED` char(1) NOT NULL,
+  `CM_CREATOR` char(12) NOT NULL,
+  `CM_PROCESS_UND_NEW` char(1) NOT NULL,
+  `CM_DIR_PAID_CHKSUM` decimal(12,2) NOT NULL,
+  `CM_UW_GROUP` char(1) NOT NULL,
+  `CM_LAST_SOURCE_ID` char(1) NOT NULL,
+  `CM_RISK_ID` char(3) NOT NULL,
+  `CM_ALL_LAYERS_DEF` char(1) NOT NULL,
+  `CM_ATLAS_YR` char(2) NOT NULL,
+  `CM_RMF_ACCESS_DT` date DEFAULT NULL,
+  `CM_DT_OF_LOSS` date DEFAULT NULL,
+  `CM_POLICY_EFF_DT` date DEFAULT NULL,
+  `CM_POLICY_EXP_DT` date DEFAULT NULL,
+  `CM_SFX_OPEN_CPRREJ` char(5) NOT NULL,
+  `CM_LAST_ROLLUP_DT` date DEFAULT NULL,
+  `CM_LOCK_USER` char(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rost_cm_claim`
+--
+
+LOCK TABLES `rost_cm_claim` WRITE;
+/*!40000 ALTER TABLE `rost_cm_claim` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rost_cm_claim` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-10-29 20:52:33
